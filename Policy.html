@@ -3,6 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="login.css">
+  <title>Policies</title>
+  <link rel="stylesheet" href="frontend.css">
 </head>
+<body>
+  <header>
+        <div class="left-container">
+            <a href="dashboard.html">
+                <img src="Assets/SMEDG_.png" width="158" height="30" alt="SMEDG Logo"> 
+            </a>
+        </div>
+        <h1>Policies</h1>
+    </header>
+    <main>
+      <div class="table-container">
+      <table>
+        <tr>
+          <th>ID</th>
+          <th style="width: 90%">Description</th>
+        </tr>
+        <tr id="P1">
+          <td>P1</td>
+          <td>If an Asset is Confidential, it must be stored in a Secure SharePoint site (or equivalent secure recordkeeping location).</td>
+        </tr>
+        <tr id="P2">
+          <td>P2</td>
+          <td>A Document that is Confidential or higher must carry a watermark/visible indicator on every page.</td>
+        </tr>
+        <tr id="P3">
+          <td>P3</td>
+          <td>External emails must not include Restricted or Confidential attachments.</td>
+        </tr>
+        <tr id="P4">
+          <td>P4</td>
+          <td>When an asset is processed on a GenAI platform, the asset’s classification must not exceed the platform’s maximum allowed class.</td>
+        </tr>
+        <tr id="P5">
+          <td>P5</td>
+          <td>An asset’s retention must follow the retention period for its classification.</td>
+        </tr>
+        <tr id="P6">
+          <td>P6</td>
+          <td>If an asset has a “Confidential” label, its classification must be ≥ Confidential.</td>
+        </tr>
+        <tr id="P7">
+          <td>P7</td>
+          <td>.zip or .pst files that are Internal or higher must not be sent to GenAI platforms.</td>
+        </tr>
+        <tr id="P8">
+          <td>P8</td>
+          <td>Confidential physical records must be stored in a Secure cabinet and be logged.</td>
+        </tr>
+        <tr id="P9">
+          <td>P9</td>
+          <td>Documents with class ≥ Internal must have at least an Internal label (or higher).</td>
+        </tr>
+        <tr id="P10">
+          <td>P10</td>
+          <td>Assets with class ≥ Internal must have a named owner and an org-unit group owner.</td>
+        </tr>
+        <tr id="P11">
+          <td>P11</td>
+          <td>High-severity alerts must be assigned within the required time; unassigned high alerts are non-compliant.</td>
+        </tr>
+        <tr id="P12">
+          <td>P12</td>
+          <td>Assets must be stored only in services approved for their org unit.</td>
+        </tr>
+        <tr id="P13">
+          <td>P13</td>
+          <td>A GenAI job must run only in an approved tenant/region; platforms limited to Internal must not process Confidential.</td>
+        </tr>
+        <tr id="P14">
+          <td>P14</td>
+          <td>Per-unit restrictions may ban external email for Restricted (or higher).</td>
+        </tr>
+        <tr id="P15">
+          <td>P15</td>
+          <td>Per-unit rules may require watermarks for ≥ Internal documents.</td>
+        </tr>
+        <tr id="P16">
+          <td>P16</td>
+          <td>Per-unit rules may require a minimum label level for assets.</td>
+        </tr>
+        <tr id="P17">
+          <td>P17</td>
+          <td>Restricted data must not be moved via USB.</td>
+        </tr>
+        <tr id="P18">
+          <td>P18</td>
+          <td>Internal data may be sent via Email (positive allowance).</td>
+        </tr>
+        <tr id="P19">
+          <td>P19</td>
+          <td>Only a Records Officer may change an asset’s classification.</td>
+        </tr>
+        <tr id="P20">
+          <td>P20</td>
+          <td>A DLP scanner may automatically apply the Confidential label; provenance must show it was applied by DLP.</td>
+        </tr>
+        <tr id="P21">
+          <td>P21</td>
+          <td>Assets must use storage services approved by their unit.</td>
+        </tr>
+        <tr id="P22">
+          <td>P22</td>
+          <td>GenAI usage must be in tenants/platforms approved for the unit.</td>
+        </tr>
+        <tr id="P23">
+          <td>P23</td>
+          <td>External email may be banned by unit for certain classifications.</td>
+        </tr>
+        <tr id="P24">
+          <td>P24</td>
+          <td>Watermarks may be required by unit for certain classifications.</td>
+        </tr>
+        <tr id="P25">
+          <td>P25</td>
+          <td>Label minimum may be set by unit for certain classifications.</td>
+        </tr>
+        <tr id="P26">
+          <td>P26</td>
+          <td>Retention may be set by unit per classification.</td>
+        </tr>
+        <tr id="P27">
+          <td>P27</td>
+          <td>Who may change classification may be limited by unit.</td>
+        </tr>
+        <tr id="P28">
+          <td>P28</td>
+          <td>GenAI tenant control may be limited by unit (approved tenants only).</td>
+        </tr>
+        <tr id="P29">
+          <td>P29</td>
+          <td>Only a Site Owner may move a Confidential asset into a Secure site.</td>
+        </tr>
+        <tr id="P30">
+          <td>P30</td>
+          <td>Only approved AU tenants may process data; a platform with Internal limit must not process Confidential.</td>
+        </tr>
+        <tr id="P31">
+          <td>P31</td>
+          <td>Restricted data cannot use USB.</td>
+        </tr>
+        <tr id="P32">
+          <td>P32</td>
+          <td>Internal data may use Email.</td>
+        </tr>
+        <tr id="P33">
+          <td>P33</td>
+          <td>Internal is allowed via Email but not via USB.</td>
+        </tr>
+        <tr id="P34">
+          <td>P34</td>
+          <td>Storage services must resolve Confidential items to a Secure site (service-side rule).</td>
+        </tr>
+        <tr id="P35">
+          <td>P35</td>
+          <td>Page labelling (header/footer/watermark) is required for Internal/Sensitive/Confidential documents.</td>
+        </tr>
+        <tr id="P36">
+          <td>P36</td>
+          <td>Emails for Internal+ require a subject label token; higher classes may require sensitivity property set.</td>
+        </tr>
+        <tr id="P37">
+          <td>P37</td>
+          <td>Assets of Internal+ must have a visible label when viewed and a file-property label recorded.</td>
+        </tr>
+        <tr id="P38">
+          <td>P38</td>
+          <td>When using Bing/Copilot, the user must be signed in to the organisation account before uploading Internal+.</td>
+        </tr>
+        <tr id="P39">
+          <td>P39</td>
+          <td>Azure OpenAI is allowed for Public/Internal only.</td>
+        </tr>
+        <tr id="P40">
+          <td>P40</td>
+          <td>Other public GenAI (e.g., ChatGPT, Gemini) is Public-only.</td>
+        </tr>
+        <tr id="P41">
+          <td>P41</td>
+          <td>Confidential in Teams chat is allowed only if the chat is linked to a Secure site or the content is sanitised and membership is clean.</td>
+        </tr>
+        <tr id="P42">
+          <td>P42</td>
+          <td>OneDrive is not for Confidential; Internal/Sensitive allowed only if draft/WIP and labelled.</td>
+        </tr>
+        <tr id="P43">
+          <td>P43</td>
+          <td>Content Manager/TRIM is appropriate for all classes (allow list).</td>
+        </tr>
+        <tr id="P44">
+          <td>P44</td>
+          <td>Google Workspace/Drive is not authorised; Google Drive allowed only for legacy content (no new content).</td>
+        </tr>
+        <tr id="P45">
+          <td>P45</td>
+          <td>Network Drive/eResearch may store Public/Internal only.</td>
+        </tr>
+        <tr id="P46">
+          <td>P46</td>
+          <td>For Internal+ sent externally: encrypt, send password out-of-band, prefer links; for Confidential also disable download/print.</td>
+        </tr>
+        <tr id="P47">
+          <td>P47</td>
+          <td>For Internal+ on portable media: encrypt, hand-deliver, and log custody.</td>
+        </tr>
+        <tr id="P48">
+          <td>P48</td>
+          <td>Archiving and destruction methods must be appropriate to classification (secure routes and destruction).</td>
+        </tr>
+      </table>
+      </div>
+    </main>
+</body>
+</html>
