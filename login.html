@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="frontend.css">
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="login-container">
     <img src="Assets/SMEDG_.png" width="158" height="30" alt="SMEDG Logo">
-    <input type="text" id="username" placeholder="Username" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
+    <input class="login" type="text" id="username" placeholder="Username" />
+    <input class="login" type="password" id="password" placeholder="Password" />
+    <button class="login-button" onclick="login()">Login</button>
     <div id="error-message" class="error"></div>
   </div>
   <script>

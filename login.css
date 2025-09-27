@@ -1,13 +1,10 @@
 body {
-    font-family: 'Inter', sans-serif;
     background-color: #f2fdffd8;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
-
 .login-container {
     background: white;
     padding: 2rem;
@@ -18,12 +15,7 @@ body {
     flex-direction: column;
     align-items: center; 
 }
-
-img {
-    margin-bottom: 1.5rem;
-}
-
-input, button {
+.login, .login-button {
     width: 100%; 
     max-width: 250px; 
     padding: 10px;
@@ -31,20 +23,17 @@ input, button {
     border: 1px solid #ccc;
     border-radius: 9999px;
 }
-
-button {
+.login-button {
     background: #00D9FF;
     color: black;
     border: none;
     cursor: pointer;
     font-size: 1rem;
 }
-
-button:hover {
+.login-button:hover {
   background: #00a8c5;
   color: white
 }
-
 .error {
   color: red;
   font-size: 0.9rem;
