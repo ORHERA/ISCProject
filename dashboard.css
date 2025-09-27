@@ -17,6 +17,26 @@
     background-color: #1E1E1E;
     color: #f2fdffd8;
 }
+.logout.button {
+    background-color: #FFFFFF;
+    border: none;
+    color: #1E1E1E;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 4px;
+    margin-left: 25px;
+    cursor: pointer;
+    border-radius: 9999px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+.logout.button:hover {
+    background-color: red;
+    color: white;
+}
 .va.button {
     display: flex;
     background-color: #00D9FF;
