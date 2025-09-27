@@ -14,8 +14,8 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 .p.button:hover {
-    background-color: #f2fdffd8;
-    color: #1E1E1E;
+    background-color: #1E1E1E;
+    color: #f2fdffd8;
 }
 .va.button {
     display: flex;
@@ -35,6 +35,10 @@
     width: 200px; 
     height: 70px; 
 }
+.va.button:hover {
+    background-color: #1E1E1E;
+    color: #f2fdffd8;
+}
 .ex.button {
     display: flex;
     background-color: #FFFFFF;
@@ -52,6 +56,10 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     width: 200px; 
     height: 70px;  
+}
+.ex.button:hover {
+    background-color: #1E1E1E;
+    color: #f2fdffd8;
 }
 .center-container {
     display: flex; 
