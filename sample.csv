@@ -1,0 +1,21 @@
+Policy,Issue,Asset,Severity,Recommendation,Admin 
+P1,Confidential doc in non-secure site,Transcript.pdf,High,Move to Secure SharePoint,Y
+P2,Confidential doc missing watermark,Budget.pdf,Medium,Add watermark before sharing,N
+P2,Confidential doc missing watermark,IncomeStatement.pdf,Medium,Add watermark before sharing,N
+P3,Confidential file emailed externally,Email #302,High,Block external sending,Y
+P3,Confidential file emailed externally,CV #1501,High,Block external sending,Y
+P6,Confidential label applied but classification lower than the requrements,Design.pdf,High,Update classification to Confidential,N
+P7,Restricted .zip uploaded to GenAI,Data1.zip,High,Remove file from GenAI,Y
+P8,Confidential physical file not logged,ContractFolder,High,Log physical record in secure cabinet register,Y
+P9,Internal document missing Internal label,ProjectPlan.docx,Low,Apply Internal label,N
+P10,Internal data missing owner details,Income Statement #103.docx,Medium,Assign named owner and group owner,Y
+P11,High alert unassigned within the time,Alert #904,High,Assign and comply immediately,Y
+P15,Internal document missing watermark,TeamStrategy.docx,Medium,Add watermark before sharing,Y
+P17,Restricted data copied to USB,ResearchResults.xls,High,Stop transfer and remove from USB,Y
+P18,Internal data blocked on email by mistake,WeeklyUpdate.pdf,Low,Allow send via email,N
+P19,Classification changed by non Records Officer,WeeklyReport.pdf,High,Revert classification and investigate,Y
+P24,Watermark Document missing watermark requirement,ContractWork.pdf,Medium,Add watermark,Y
+P31,Restricted data copied to USB,ResearchData.xls,High,Remove from USB and use secure transfer method,Y
+P35,Internal document missing page labelling,WeeklyPlan.docx,Low,Add header/footer/watermark before sharing,N
+P39,Confidential data sent to Azure OpenAI,CustomerData,High,Remove data and use platform only for Public/Internal,Y
+P40,Internal data uploaded to ChatGPT,WeekltNotes.pdf,High,Remove content and restrict uploads to Public data only,Y
