@@ -1,4 +1,4 @@
-.p.button {
+#p-button {
     background-color: #FFFFFF;
     border: none;
     color: #1E1E1E;
@@ -13,11 +13,11 @@
     border-radius: 9999px; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
-.p.button:hover {
+#p-button:hover {
     background-color: #1E1E1E;
     color: #f2fdffd8;
 }
-.logout.button {
+#logout-button {
     background-color: #FFFFFF;
     border: none;
     color: #1E1E1E;
@@ -33,11 +33,11 @@
     border-radius: 9999px; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
-.logout.button:hover {
+#logout-button:hover {
     background-color: red;
     color: white;
 }
-.va.button {
+#va-button {
     display: flex;
     background-color: #00D9FF;
     border: none;
@@ -55,11 +55,11 @@
     width: 200px; 
     height: 70px; 
 }
-.va.button:hover {
+#va-button:hover {
     background-color: #1E1E1E;
     color: #f2fdffd8;
 }
-.ex.button {
+#ex-button {
     display: flex;
     background-color: #FFFFFF;
     border: none;
@@ -77,7 +77,7 @@
     width: 200px; 
     height: 70px;  
 }
-.ex.button:hover {
+#ex-button:hover {
     background-color: #1E1E1E;
     color: #f2fdffd8;
 }
@@ -88,13 +88,17 @@
     height: 15vh;
     gap: 4rem;
 }
-.table-container .badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 5px 10px;
-  border-radius: 50%;
-  background: red;
-  color: white;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+.table-container #badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 9999px;
+    background: red;
+    color: white;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+}
+a {
+    text-decoration: underline;
+    color: black
 }

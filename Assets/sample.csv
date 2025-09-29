@@ -1,4 +1,3 @@
-Policy,Issue,Asset,Severity,Recommendation,Admin 
 P1,Confidential doc in non-secure site,Transcript.pdf,High,Move to Secure SharePoint,Y
 P2,Confidential doc missing watermark,Budget.pdf,Medium,Add watermark before sharing,N
 P2,Confidential doc missing watermark,IncomeStatement.pdf,Medium,Add watermark before sharing,N

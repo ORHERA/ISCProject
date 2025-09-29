@@ -98,3 +98,8 @@ tr:last-of-type td:first-of-type {
 tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 20px;
 }
+tr:target {
+  background-color: #1E1E1E; 
+  color: #f2fdffd8;
+  transition: background-color 2s ease;
+}

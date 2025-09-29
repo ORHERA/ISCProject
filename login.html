@@ -35,8 +35,10 @@
       }
 
       if (username === adminUsername && password === adminPassword) {
+        localStorage.setItem("currentUserRole", "admin");
         window.location.href = "dashboard.html"; 
       } else if (username === guestUsername && password === guestPassword) {
+        localStorage.setItem("currentUserRole", "guest");
         window.location.href = "dashboard.html";
       } else {
         errorMessage.textContent = "Invalid username or password.";
