@@ -24,20 +24,10 @@
             <button id="va-button">Validate</button>
             <button id="ex-button">Export</button>
         </div>
-        <div class="table-container">
-            <span id="badge"></span>
-            <table id="dynamicTable">
-                <thead>
-                    <tr>
-                    <th style="width:10%">Policy</th>
-                    <th style="width:30%">Issue</th>
-                    <th style="width:20%">Asset</th>
-                    <th style="width:13%">Severity</th>
-                    <th style="width:30%">Recommendation</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
+        <div id="table-container">
+            <div id="placeholderTable">
+                <p>No alerts.<br>Click <strong>Validate</strong> to perform a full scan.</p>
+            </div>
     </main>
     <script src="dashboard.js"></script>
 </body>

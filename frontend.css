@@ -55,7 +55,7 @@ main {
     position: absolute;
     left: 2rem;
 }
-.table-container {
+#table-container {
     display: flex; 
     justify-content: center;
     align-items: center; 
