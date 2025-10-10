@@ -15,32 +15,32 @@ async function buildTable() {
     table = document.createElement("table");
     table.id = "dynamicTable";
   table.innerHTML = `
-<thead>
-  <tr>
-    <th style="width:10%">
-      <div class="sort-header">
-        <span class="header-text">Policy</span>
-        <div class="arrows">
-          <span class="arrow-up">▲</span>
-          <span class="arrow-down">▼</span>
-        </div>
-      </div>
-    </th>
-    <th style="width:30%">Issue</th>
-    <th style="width:20%">Asset</th>
-    <th style="width:13%">
-      <div class="sort-header">
-        <span class="header-text">Severity</span>
-        <div class="arrows">
-          <span class="arrow-up">▲</span>
-          <span class="arrow-down">▼</span>
-        </div>
-      </div>
-    </th>
-    <th style="width:30%">Recommendation</th>
-  </tr>
-</thead>
-`;
+    <thead>
+      <tr>
+        <th style="width:10%">
+          <div class="sort-header">
+            <span class="header-text">Policy</span>
+            <div class="arrows">
+              <span class="arrow-up">▲</span>
+              <span class="arrow-down">▼</span>
+            </div>
+          </div>
+        </th>
+        <th style="width:30%">Issue</th>
+        <th style="width:20%">Asset</th>
+        <th style="width:13%">
+          <div class="sort-header">
+            <span class="header-text">Severity</span>
+            <div class="arrows">
+              <span class="arrow-up">▲</span>
+              <span class="arrow-down">▼</span>
+            </div>
+          </div>
+        </th>
+        <th style="width:30%">Recommendation</th>
+      </tr>
+    </thead>
+    `;
     container.appendChild(table);
   }
 
@@ -113,6 +113,9 @@ async function buildTable() {
     if (mediumEl) mediumEl.textContent = mediumCount;
     if (lowEl) lowEl.textContent = lowCount;
 
+    // Colour code severity
+    colourCodeSeverity(tbody);
+    
     // Enable sorting
     enableSorting(table, tableData, tbody);
 
@@ -145,6 +148,21 @@ function renderTable(data, tbody) {
 
     tbody.appendChild(tr);
   });
+}
+
+// Severity colour coding function
+function colourCodeSeverity(tbody) {
+  const severityCells = tbody.querySelectorAll("td:nth-child(4)");
+      severityCells.forEach(cell => {
+        const text = cell.textContent.toLowerCase();
+        if (text === "high") {
+          cell.classList.add("severity-high");
+        } else if (text === "medium") {
+          cell.classList.add("severity-medium");
+        } else if (text === "low") {
+          cell.classList.add("severity-low");
+        }
+      });
 }
 
 // Sorting function
@@ -183,7 +201,11 @@ function enableSorting(table, tableData, tbody) {
         });
 
         renderTable(tableData, tbody);
+
+        colourCodeSeverity(tbody);
+
       });
+
 
       // Arrow DOWN click
       arrowDown.addEventListener("click", (e) => {
@@ -209,11 +231,15 @@ function enableSorting(table, tableData, tbody) {
         });
 
         renderTable(tableData, tbody);
+
+        colourCodeSeverity(tbody);
+        
       });
     }
   });
 }
 
+// Restore table data on page load
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("table-container");
   const placeholder = document.getElementById("placeholderTable");
@@ -276,10 +302,13 @@ window.addEventListener("DOMContentLoaded", () => {
   
   // Re-enable sorting
   enableSorting(table, parsedData, tbody);
-});
+
+  // Re-enable colour code severity
+  colourCodeSeverity(tbody);
 
 // Clear data on logout
 document.getElementById("logout-button")?.addEventListener("click", () => {
   localStorage.removeItem("currentTableData");
   localStorage.removeItem("currentUserRole");
+});
 });

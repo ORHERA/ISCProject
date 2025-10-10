@@ -110,39 +110,47 @@ a {
     height: 35vh;
     font-size: 30px;
 }
-
 .sort-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
 }
-
 .arrows {
     display: flex;           
     flex-direction: row;     
     gap: 2px;              
     user-select: none;
 }
-
 .arrow-up{
     color: #888; 
     font-size: 14px;
     cursor: pointer;
 }
-
 .arrow-down {
     color: #888; 
     font-size: 14px;
     cursor: pointer;  
     margin-top: 2px; 
 }
-
 .arrow-up.active, .arrow-down.active {
     color: #000; 
 }
-
 .arrow-down.active {
     color: #000; 
     margin-top: 2px;
+}
+.severity-high {
+    color: red;
+    font-weight: bold;
+}
+
+.severity-medium {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.severity-low {
+    color: darkgreen;
+    font-weight: bold;
 }
