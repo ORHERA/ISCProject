@@ -5,7 +5,7 @@ document.getElementById("va-button").addEventListener("click", buildTable);
 
 document.getElementById('ex-button').addEventListener('click', () => {
   const csvData = getTableDataAsCsv('dynamicTable');
-  downloadCsv(csvData, 'tavle.csv');
+  downloadCsv(csvData, 'table.csv');
 });
 
 // buildTable
