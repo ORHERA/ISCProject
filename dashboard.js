@@ -1,6 +1,13 @@
 // Press validate button to start
 document.getElementById("va-button").addEventListener("click", buildTable);
 
+// Press export button to export csv
+
+document.getElementById('ex-button').addEventListener('click', () => {
+  const csvData = getTableDataAsCsv('dynamicTable');
+  downloadCsv(csvData, 'tavle.csv');
+});
+
 // buildTable
 async function buildTable() {
   const container = document.getElementById("table-container");
@@ -239,6 +246,42 @@ function enableSorting(table, tableData, tbody) {
   });
 }
 
+//Extract function
+function getTableDataAsCsv(tableId, separator = ',') {
+  const rows = document.querySelectorAll(`#${tableId} tr`);
+  const csv = [];
+
+  for (let i = 0; i < rows.length; i++) {
+    const row = [];
+    const cols = rows[i].querySelectorAll('td, th');
+
+    for (let j = 0; j < cols.length; j++) {
+      let data = cols[j].innerText
+      .replace(/▲|▼/g, '')
+      .replace(/(\r\n|\n|\r)/gm, '')
+      .replace(/(\s\s)/gm, ' ')
+      .trim();
+      data = data.replace(/"/g, '""');
+      row.push(`"${data}"`);
+    }
+    csv.push(row.join(separator));
+  }
+  return csv.join('\n');
+}
+
+// Download function
+function downloadCsv(csvString, filename = 'table_export.csv') {
+  const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.setAttribute('href', URL.createObjectURL(blob));
+  link.setAttribute('download', filename);
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+
 // Restore table data on page load
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("table-container");
@@ -296,6 +339,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const parsedData = JSON.parse(savedData);
   renderTable(parsedData, tbody);
+
+
+
 
   // Badge counter
   badge.textContent = parsedData.length; 
